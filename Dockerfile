@@ -8,7 +8,7 @@ ENV HOMEPATH /home/www
 RUN set -eux; \
     apt-get update; \
     apt-get install -y --no-install-recommends \
-    sudo net-tools iputils-ping iproute2 telnet curl wget httping nano procps traceroute iperf3 apt-transport-https ca-certificates software-properties-common
+    sudo net-tools iputils-ping iproute2 telnet curl wget httping nano procps traceroute iperf3 apt-transport-https ca-certificates software-properties-common redis-tools mysql-client
 RUN addgroup www && adduser --gecos "" --ingroup www --disabled-password www
 USER www
 WORKDIR ${HOMEPATH}
